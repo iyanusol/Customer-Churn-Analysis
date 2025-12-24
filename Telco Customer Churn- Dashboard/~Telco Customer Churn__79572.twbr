@@ -1,0 +1,1874 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Tenure (bin) Parameter' datatype='integer' default-format='N' name='[Tenure (bin) Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0'>
+        <calculation class='tableau' formula='0' />
+        <range granularity='1' max='24' min='0' />
+      </column>
+    </datasource>
+    <datasource caption='Telco-Customer-Churn' inline='true' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Telco-Customer-Churn' name='textscan.1kg1nlm1aw0zwy172hxor1y9jmko'>
+            <connection class='textscan' directory='C:/Users/iyanu/Downloads/LEARNING DATA ANALYTICS/FULL TABLEAU CERTIFICATE WITH ALEX/resources' filename='Telco-Customer-Churn.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1kg1nlm1aw0zwy172hxor1y9jmko' name='Telco-Customer-Churn.csv' table='[Telco-Customer-Churn#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='customerID' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='SeniorCitizen' ordinal='2' />
+            <column datatype='string' name='Partner' ordinal='3' />
+            <column datatype='string' name='Dependents' ordinal='4' />
+            <column datatype='integer' name='tenure' ordinal='5' />
+            <column datatype='string' name='PhoneService' ordinal='6' />
+            <column datatype='string' name='MultipleLines' ordinal='7' />
+            <column datatype='string' name='InternetService' ordinal='8' />
+            <column datatype='string' name='OnlineSecurity' ordinal='9' />
+            <column datatype='string' name='OnlineBackup' ordinal='10' />
+            <column datatype='string' name='DeviceProtection' ordinal='11' />
+            <column datatype='string' name='TechSupport' ordinal='12' />
+            <column datatype='string' name='StreamingTV' ordinal='13' />
+            <column datatype='string' name='StreamingMovies' ordinal='14' />
+            <column datatype='string' name='Contract' ordinal='15' />
+            <column datatype='string' name='PaperlessBilling' ordinal='16' />
+            <column datatype='string' name='PaymentMethod' ordinal='17' />
+            <column datatype='real' name='MonthlyCharges' ordinal='18' />
+            <column datatype='real' name='TotalCharges' ordinal='19' />
+            <column datatype='string' name='Churn' ordinal='20' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customerID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customerID]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>customerID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SeniorCitizen</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SeniorCitizen]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>SeniorCitizen</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Partner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Partner]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>Partner</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dependents</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Dependents]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>Dependents</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tenure</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tenure]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>tenure</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PhoneService</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PhoneService]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>PhoneService</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MultipleLines</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MultipleLines]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>MultipleLines</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InternetService</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[InternetService]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>InternetService</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OnlineSecurity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OnlineSecurity]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>OnlineSecurity</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OnlineBackup</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OnlineBackup]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>OnlineBackup</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DeviceProtection</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DeviceProtection]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>DeviceProtection</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TechSupport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TechSupport]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>TechSupport</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StreamingTV</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StreamingTV]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>StreamingTV</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StreamingMovies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StreamingMovies]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>StreamingMovies</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Contract</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Contract]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>Contract</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PaperlessBilling</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PaperlessBilling]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>PaperlessBilling</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PaymentMethod</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PaymentMethod]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>PaymentMethod</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonthlyCharges</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MonthlyCharges]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>MonthlyCharges</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalCharges</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalCharges]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>TotalCharges</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Churn</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Churn]</local-name>
+            <parent-name>[Telco-Customer-Churn.csv]</parent-name>
+            <remote-alias>Churn</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+      <column caption='Device Protection' datatype='string' name='[DeviceProtection]' role='dimension' type='nominal' />
+      <column caption='Internet Service' datatype='string' name='[InternetService]' role='dimension' type='nominal' />
+      <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+      <column caption='Multiple Lines' datatype='string' name='[MultipleLines]' role='dimension' type='nominal' />
+      <column caption='Online Backup' datatype='string' name='[OnlineBackup]' role='dimension' type='nominal' />
+      <column caption='Online Security' datatype='string' name='[OnlineSecurity]' role='dimension' type='nominal' />
+      <column caption='Paperless Billing' datatype='string' name='[PaperlessBilling]' role='dimension' type='nominal' />
+      <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[PaymentMethod]' />
+        <aliases>
+          <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+          <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+          <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+          <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+        </aliases>
+      </column>
+      <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+      <column caption='Phone Service' datatype='string' name='[PhoneService]' role='dimension' type='nominal' />
+      <column caption='Senior Citizen' datatype='integer' name='[SeniorCitizen]' role='measure' type='quantitative' />
+      <column caption='Streaming Movies' datatype='string' name='[StreamingMovies]' role='dimension' type='nominal' />
+      <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+      <column caption='Tech Support' datatype='string' name='[TechSupport]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='Tenure (bin)' datatype='integer' name='[Tenure (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[tenure]' peg='0' size='3' />
+      </column>
+      <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+      <column caption='Telco-Customer-Churn.csv' datatype='table' name='[__tableau_internal_object_id__].[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]' role='measure' type='quantitative' />
+      <column caption='Customer ID' datatype='string' name='[customerID]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+      <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[PaymentMethod]' derivation='None' name='[none:PaymentMethod:nk]' pivot='key' type='nominal' />
+      <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Churn Per Payment Method)' hidden='true' name='[Action (Churn Per Payment Method)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Payment Method (copy)_5468166435053568]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Churn,Contract)' hidden='true' name='[Action (Churn,Contract)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Churn]' />
+          <groupfilter function='level-members' level='[Contract]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Churn,Contract,Monthly Charges,Total Charges)' hidden='true' name='[Action (Churn,Contract,Monthly Charges,Total Charges)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Churn]' />
+          <groupfilter function='level-members' level='[Contract]' />
+          <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+          <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Churn,Monthly Charges,Total Charges)' hidden='true' name='[Action (Churn,Monthly Charges,Total Charges)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Churn]' />
+          <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+          <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Churn,Tenure (bin))' hidden='true' name='[Action (Churn,Tenure (bin))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Churn]' />
+          <groupfilter function='level-members' level='[Tenure (bin)]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Payment Method,Streaming TV)' hidden='true' name='[Action (Payment Method,Streaming TV)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[PaymentMethod]' />
+          <groupfilter function='level-members' level='[StreamingTV]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/iyanu/AppData/Local/Temp/TableauTemp/#TableauTemp_1pdccgm1ogcc1f1cgqpoa1suioh1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='12/24/2025 03:52:39 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>customerID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customerID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customerID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7043</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SeniorCitizen</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SeniorCitizen]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SeniorCitizen</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Partner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Partner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Partner</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Dependents</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Dependents]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Dependents</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tenure</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tenure]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tenure</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>73</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PhoneService</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PhoneService]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PhoneService</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MultipleLines</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MultipleLines]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MultipleLines</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>InternetService</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[InternetService]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>InternetService</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OnlineSecurity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OnlineSecurity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OnlineSecurity</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OnlineBackup</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OnlineBackup]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OnlineBackup</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DeviceProtection</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DeviceProtection]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DeviceProtection</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TechSupport</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TechSupport]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TechSupport</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StreamingTV</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[StreamingTV]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StreamingTV</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StreamingMovies</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[StreamingMovies]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StreamingMovies</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Contract</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Contract]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Contract</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PaperlessBilling</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PaperlessBilling]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PaperlessBilling</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PaymentMethod</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PaymentMethod]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PaymentMethod</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MonthlyCharges</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MonthlyCharges]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MonthlyCharges</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1383</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TotalCharges</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TotalCharges]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TotalCharges</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4976</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Churn</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Churn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Churn</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Telco-Customer-Churn.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Churn:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:PaymentMethod:nk]' type='palette'>
+            <map to='#7e756d'>
+              <bucket>&quot;Mailed check&quot;</bucket>
+            </map>
+            <map to='#b66353'>
+              <bucket>&quot;Bank transfer (automatic)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Credit card (automatic)&quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Electronic check&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Telco-Customer-Churn.csv' id='Telco-Customer-Churn.csv_B3C03CCC7EBF4BA1AFE3C6539FFBA2E4'>
+            <properties context=''>
+              <relation connection='textscan.1kg1nlm1aw0zwy172hxor1y9jmko' name='Telco-Customer-Churn.csv' table='[Telco-Customer-Churn#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='string' name='customerID' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='SeniorCitizen' ordinal='2' />
+                  <column datatype='string' name='Partner' ordinal='3' />
+                  <column datatype='string' name='Dependents' ordinal='4' />
+                  <column datatype='integer' name='tenure' ordinal='5' />
+                  <column datatype='string' name='PhoneService' ordinal='6' />
+                  <column datatype='string' name='MultipleLines' ordinal='7' />
+                  <column datatype='string' name='InternetService' ordinal='8' />
+                  <column datatype='string' name='OnlineSecurity' ordinal='9' />
+                  <column datatype='string' name='OnlineBackup' ordinal='10' />
+                  <column datatype='string' name='DeviceProtection' ordinal='11' />
+                  <column datatype='string' name='TechSupport' ordinal='12' />
+                  <column datatype='string' name='StreamingTV' ordinal='13' />
+                  <column datatype='string' name='StreamingMovies' ordinal='14' />
+                  <column datatype='string' name='Contract' ordinal='15' />
+                  <column datatype='string' name='PaperlessBilling' ordinal='16' />
+                  <column datatype='string' name='PaymentMethod' ordinal='17' />
+                  <column datatype='real' name='MonthlyCharges' ordinal='18' />
+                  <column datatype='real' name='TotalCharges' ordinal='19' />
+                  <column datatype='string' name='Churn' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_6811E6E6548E40CCAFCB7BA49D209A04]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Churn Rate Dashboard' type='sheet' worksheet='Contract Churn Chart' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Churn Rate Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_7F6871431002475A8A042861CE5416AC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Churn Rate Dashboard' type='sheet' worksheet='Payment Churn Count' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Churn Rate Dashboard' />
+      </command>
+    </action>
+    <action caption='All Filters for Dashboard' name='[Action3_BF82467C09434F24B04AA36BE0DC376B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Churn Rate Dashboard' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Churn Rate Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter1' name='[Action4_42C21D9B58F1426299C89B9E924CAAF9]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Churn Rate Dashboard' type='sheet'>
+        <exclude-sheet name='Contract Churn Chart' />
+        <exclude-sheet name='Tenure-Churn Count' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Churn Rate Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Charges Scatter Plot'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontsize='8' italic='true'>As total charges increased which directly collorates to tenure. The less likely they are to churn with the high price</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+            <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[PaymentMethod]' />
+              <aliases>
+                <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+                <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+                <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+                <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+              </aliases>
+            </column>
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Tenure (bin)' datatype='integer' name='[Tenure (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[tenure]' peg='0' size='3' />
+            </column>
+            <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+            <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Contract]' derivation='None' name='[none:Contract:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:qk]' pivot='key' type='quantitative' />
+            <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]'>
+            <groupfilter function='level-members' level='[Payment Method (copy)_5468166435053568]' user:ui-action-filter='[Action2_7F6871431002475A8A042861CE5416AC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6811E6E6548E40CCAFCB7BA49D209A04]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Tenure (bin)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[PaymentMethod]' />
+              <groupfilter function='level-members' level='[StreamingTV]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' />
+              <lod column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Contract:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/circle' />
+                <format attr='size' value='1' />
+                <format attr='mark-transparency' value='152' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:MonthlyCharges:qk]</rows>
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:TotalCharges:qk]</cols>
+      </table>
+      <simple-id uuid='{B06A8B81-9A1B-4954-A954-900FC72E9982}' />
+    </worksheet>
+    <worksheet name='Churn Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column-instance column='[Churn]' derivation='Count' name='[cnt:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Contract]' derivation='None' name='[none:Contract:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Contract:nk]' value='153' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:Churn:qk]</rows>
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Contract:nk]</cols>
+      </table>
+      <simple-id uuid='{892B47E8-2B64-427D-8414-480397806920}' />
+    </worksheet>
+    <worksheet name='Contract Churn Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+            <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[PaymentMethod]' />
+              <aliases>
+                <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+                <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+                <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+                <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+              </aliases>
+            </column>
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Tenure (bin)' datatype='integer' name='[Tenure (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[tenure]' peg='0' size='3' />
+            </column>
+            <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+            <column-instance column='[Churn]' derivation='Count' name='[cnt:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Contract]' derivation='None' name='[none:Contract:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:ok]' pivot='key' type='ordinal' />
+            <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]'>
+            <groupfilter function='level-members' level='[Payment Method (copy)_5468166435053568]' user:ui-action-filter='[Action2_7F6871431002475A8A042861CE5416AC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Tenure (bin)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[PaymentMethod]' />
+              <groupfilter function='level-members' level='[StreamingTV]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Contract:nk]' value='138' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:Churn:qk]</rows>
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Contract:nk]</cols>
+      </table>
+      <simple-id uuid='{ACE0FF43-0CA8-4BA3-A89B-7C5B02D0C65B}' />
+    </worksheet>
+    <worksheet name='Payment Churn Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+            <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[PaymentMethod]' />
+              <aliases>
+                <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+                <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+                <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+                <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+              </aliases>
+            </column>
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Tenure (bin)' datatype='integer' name='[Tenure (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[tenure]' peg='0' size='3' />
+            </column>
+            <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+            <column-instance column='[Churn]' derivation='Count' name='[cnt:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Payment Method (copy)_5468166435053568]' derivation='None' name='[none:Payment Method (copy)_5468166435053568:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:ok]' pivot='key' type='ordinal' />
+            <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6811E6E6548E40CCAFCB7BA49D209A04]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Tenure (bin)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[PaymentMethod]' />
+              <groupfilter function='level-members' level='[StreamingTV]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]'>
+            <groupfilter function='member' level='[none:Churn:nk]' member='&quot;Yes&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Tenure (bin))]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' value='73' />
+            <format attr='height' value='63' />
+            <format attr='width' field='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Payment Method (copy)_5468166435053568:nk]' value='193' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:Churn:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.8570718765258789' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Payment Method (copy)_5468166435053568:nk]</cols>
+      </table>
+      <simple-id uuid='{1C27F0AA-D40D-4AB0-9F15-2E8D1870ADDD}' />
+    </worksheet>
+    <worksheet name='Streaming'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+            <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[PaymentMethod]' />
+              <aliases>
+                <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+                <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+                <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+                <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+              </aliases>
+            </column>
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+            <column-instance column='[PaymentMethod]' derivation='Count' name='[cnt:PaymentMethod:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[PaymentMethod]' derivation='None' name='[none:PaymentMethod:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StreamingTV]' derivation='None' name='[none:StreamingTV:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]'>
+            <groupfilter function='level-members' level='[Payment Method (copy)_5468166435053568]' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:StreamingTV:nk]' value='101' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:PaymentMethod:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:PaymentMethod:qk]</rows>
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:StreamingTV:nk]</cols>
+      </table>
+      <simple-id uuid='{44284BDD-91A5-43F0-BA59-4E9DB3C309F3}' />
+    </worksheet>
+    <worksheet name='Tenure-Churn Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontsize='8' italic='true'>Count of Churn for each Tenure (bin).  Color shows details about Churn.  The marks are labeled by count of Churn.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Telco-Customer-Churn' name='federated.0miyc3c1ycgod71ega8i41jvqmqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0miyc3c1ycgod71ega8i41jvqmqy'>
+            <column datatype='string' name='[Churn]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Contract]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[MonthlyCharges]' role='measure' type='quantitative' />
+            <column caption='Churn Per Payment Method' datatype='string' name='[Payment Method (copy)_5468166435053568]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[PaymentMethod]' />
+              <aliases>
+                <alias key='&quot;Bank transfer (automatic)&quot;' value='Bank Transfer' />
+                <alias key='&quot;Credit card (automatic)&quot;' value='Credit Card' />
+                <alias key='&quot;Electronic check&quot;' value='Electronic Check' />
+                <alias key='&quot;Mailed check&quot;' value='Mailed Check' />
+              </aliases>
+            </column>
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Tenure (bin)' datatype='integer' name='[Tenure (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[tenure]' peg='0' size='3' />
+            </column>
+            <column caption='Total Charges' datatype='real' name='[TotalCharges]' role='measure' type='quantitative' />
+            <column-instance column='[Churn]' derivation='Count' name='[cnt:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Churn]' derivation='None' name='[none:Churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MonthlyCharges]' derivation='None' name='[none:MonthlyCharges:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Tenure (bin)]' derivation='None' name='[none:Tenure (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[TotalCharges]' derivation='None' name='[none:TotalCharges:ok]' pivot='key' type='ordinal' />
+            <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]'>
+            <groupfilter function='level-members' level='[Payment Method (copy)_5468166435053568]' user:ui-action-filter='[Action2_7F6871431002475A8A042861CE5416AC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6811E6E6548E40CCAFCB7BA49D209A04]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[Contract]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Churn]' />
+              <groupfilter function='level-members' level='[none:MonthlyCharges:ok]' />
+              <groupfilter function='level-members' level='[none:TotalCharges:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_BF82467C09434F24B04AA36BE0DC376B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[PaymentMethod]' />
+              <groupfilter function='level-members' level='[StreamingTV]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn Per Payment Method)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Churn,Contract,Monthly Charges,Total Charges)]</column>
+            <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Action (Payment Method,Streaming TV)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' />
+              <lod column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:Churn:qk]' />
+              <lod column='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[cnt:Churn:qk]</rows>
+        <cols>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Tenure (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0miyc3c1ycgod71ega8i41jvqmqy].[Tenure (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{56281A26-1FF4-4D91-A573-8A15D9ABAEBC}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Churn Rate Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f5eddc' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='text-align' value='center' />
+          <format attr='font-family' value='Tahoma' />
+          <format attr='font-weight' value='bold' />
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-align' value='center' />
+          <format attr='vertical-align' value='top' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='62388' id='12' param='horz' type-v2='layout-flow' w='98958' x='521' y='893'>
+            <zone h='62388' id='6' param='vert' type-v2='layout-flow' w='91140' x='521' y='893'>
+              <zone h='5804' id='8' type-v2='title' w='91140' x='521' y='893'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='56584' id='3' param='horz' type-v2='layout-flow' w='91140' x='521' y='6697'>
+                <zone h='56584' id='7' type-v2='layout-basic' w='91140' x='521' y='6697'>
+                  <zone h='12611' id='9' name='Payment Churn Count' show-title='false' w='58794' x='521' y='6697'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='56584' id='10' name='Contract Churn Chart' w='32346' x='59315' y='6697'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43973' id='14' name='Charges Scatter Plot' show-caption='true' w='58794' x='521' y='19308'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='120' h='62388' id='11' is-fixed='true' param='vert' type-v2='layout-flow' w='7818' x='91661' y='893'>
+              <zone h='9375' id='13' name='Contract Churn Chart' pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type-v2='color' w='7818' x='91661' y='893'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='35826' id='15' name='Tenure-Churn Count' w='63518' x='521' y='63281'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='35826' id='16' type-v2='text' w='14137' x='64039' y='63281'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Findings:</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Churn Rate dramatically increased for new users when the monthly charges were high. As customers stayed with the company longer, they were less likely to churn as prices increased.</run>
+              <run fontalignment='0'>Æ&#10;&#10;</run>
+              <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Recommendations:</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>We recommend bringing on new clients at a lower price point and slowly increasing over time for better ROI.</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Recommend converting Monthly customers to yearly or two-year contracts with incentives.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='35826' id='19' name='Streaming' w='21303' x='78176' y='63281'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98214' id='20' param='vert' type-v2='layout-flow' w='98958' x='521' y='893'>
+                <zone h='5804' id='8' type-v2='title' w='91140' x='521' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='12611' id='9' is-fixed='true' name='Payment Churn Count' show-title='false' w='58794' x='521' y='6697'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='56584' id='10' is-fixed='true' name='Contract Churn Chart' w='32346' x='59315' y='6697'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9375' id='13' name='Contract Churn Chart' pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type-v2='color' w='7818' x='91661' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43973' id='14' is-fixed='true' name='Charges Scatter Plot' show-caption='true' w='58794' x='521' y='19308'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='279' h='35826' id='15' is-fixed='true' name='Tenure-Churn Count' w='63518' x='521' y='63281'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='35826' id='16' type-v2='text' w='14137' x='64039' y='63281'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Findings:</run>
+                    <run fontalignment='0'>Æ&#10;</run>
+                    <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Churn Rate dramatically increased for new users when the monthly charges were high. As customers stayed with the company longer, they were less likely to churn as prices increased.</run>
+                    <run fontalignment='0'>Æ&#10;&#10;</run>
+                    <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Recommendations:</run>
+                    <run fontalignment='0'>Æ&#10;</run>
+                    <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>We recommend bringing on new clients at a lower price point and slowly increasing over time for better ROI.</run>
+                    <run fontalignment='0'>Æ&#10;</run>
+                    <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>Recommend converting Monthly customers to yearly or two-year contracts with incentives.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='279' h='35826' id='19' is-fixed='true' name='Streaming' w='21303' x='78176' y='63281'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A66694B7-7B69-4D7F-8183-FFB205F9CAAE}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Tenure-Churn Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EEC7C6A8-AC7C-4E76-901B-2CC59078890F}' />
+    </window>
+    <window class='worksheet' name='Charges Scatter Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AF930EBC-7C90-40A4-B282-7ACC5F9ED7AD}' />
+    </window>
+    <window class='worksheet' name='Contract Churn Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{670B84AA-C4A6-4F8D-9410-51779AA69D8E}' />
+    </window>
+    <window class='worksheet' name='Payment Churn Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7FE5E4DC-27AC-44FA-9F60-1B51A336D30B}' />
+    </window>
+    <window class='worksheet' name='Churn Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:Churn:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D163B675-EF4B-4002-91F8-A3B82660B049}' />
+    </window>
+    <window class='worksheet' name='Streaming'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0miyc3c1ycgod71ega8i41jvqmqy].[none:PaymentMethod:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0285A794-76FD-40CB-8725-9535FC0313EA}' />
+    </window>
+    <window class='dashboard' name='Churn Rate Dashboard'>
+      <viewpoints>
+        <viewpoint name='Charges Scatter Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Contract Churn Chart'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Payment Churn Count'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Streaming'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tenure-Churn Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{F4CB139E-BA04-460B-B681-EBE9E4DB447F}' />
+    </window>
+  </windows>
+</workbook>
